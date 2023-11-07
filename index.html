@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scrollytelling Poems</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Food Dessert: A Scrollytelling Experience</h1>
+    </header>
+    <main class="wrapper">
+      <div class="left-column">
+        <div class="left-column-content">
+          <div class="filler-verse"></div>
+          <ul class="verse" id="verse1">
+            <li class="line" id="line1">In the heart of Georgia, a tale unfolds,</span></li>
+            <li class="line" id="line2">Of towns and cities, stories yet untold.</li>
+            <li class="line" id="line3">Hunger pangs echoed in many a home,</li>
+            <li class="line" id="line4">Opening fridges, where emptiness roams.</li>
+          </ul>
+
+          <ul class="verse" id="verse2">
+            <li class="line" id="line1">The counties stand, each with its fate,</li>
+            <li class="line" id="line2">A map of Georgia, counties outlined clear,</li>
+            <li class="line" id="line3">Orange showing food insecurity higher than 15%.</li>
+            <li class="line" id="line4">Hover to see Annual Food Budget Shortfall.</li>
+          </ul>
+
+          <ul class="verse" id="verse3">
+            <li class="line" id="line1">Cobb feels the struggle, in every child's core,</li>
+            <li class="line" id="line2">DeKalb's numbers rising, more than before.</li>
+            <li class="line" id="line3">Fulton's youth grapple, each day and night,</li>
+            <li class="line" id="line4">And Gwinnett's food insecure isn't right.</li>
+          </ul>
+
+          <ul class="verse" id="verse4">
+            <li class="line" id="line1">The Child Food Insecurity Rate is a sad song,</li>
+            <li class="line" id="line2">Wonder Bread tales aren’t fiction, they're real,</li>
+            <li class="line" id="line3">For many in Georgia, it’s a daily ordeal.</li>
+            <li class="line" id="line4">Let the data rise, and let it be known</li>
+          </ul>
+          <div class="filler-verse"></div>
+        </div>
+      </div>
+      <div class="right-column">
+        <svg id="svg"></svg>
+        <div id="county-name"></div> <!-- This div will display underneath the SVG -->
+      </div>
+      
+    </main>
+    <footer>
+      <button class="arrow-button" id="backward-button">◄</button>
+      <button class="arrow-button" id="forward-button">►</button>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
