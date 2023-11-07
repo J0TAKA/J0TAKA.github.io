@@ -1,0 +1,148 @@
+/* Resetting some defaults so we can define things manually */
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling our header */
+header {
+  background-color: black;
+  text-align: center;
+  color: white;
+  height: 100px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.title {
+  padding: 20px;
+}
+
+.wrapper {
+  display: flex; 
+  min-height: calc(100vh - 150px);
+}
+
+.left-column {
+  flex: 2; 
+  background: linear-gradient(to bottom right, #ffa500, #ff4500);
+  color: black;
+  display: flex;
+  /* Position things vertically in the centre */
+  align-items: center;
+  /* Position things horizontally in the centre */
+  justify-content: center;
+  padding: 20px;
+}
+
+.left-column-content {
+  /* This forces the maximum height of the div to be equal to 100 % of the view height (the current size of the screen)*/
+  /* the -150px is the size of the header and the footer combinedd */
+  /* You should be very careful when writing css like this as there are potential complications you can run into */
+  /* when using viewport units (vh) and you'll also need to be careful that if you update the height of the */
+  /* header or footer that you are sure to update the value here. */
+  max-height: calc(100vh - 150px);
+  overflow: auto;
+}
+
+.left-column-content::-webkit-scrollbar {
+  width: 0; /* Hide the scrollbar's width */
+  height: 0; /* Hide the scrollbar's height */
+}
+
+/* TODO hide the scrollbar on the left-column-content*/
+
+.right-column {
+  flex: 2; 
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center children vertically */
+  align-items: center; /* Center children horizontally */
+  padding: 20px;
+  background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(0, 0, 0, 0.05) 10px,
+      rgba(0, 0, 0, 0.05) 20px
+  );
+}
+
+footer {
+  position: fixed; /*force the footer to not move regardless of what else is going on on the page*/
+  bottom: 0; /* Make sure it stays at the bottom of the page */
+  background-color: black;
+  display: flex; /*need this to be a flex to work with justify-content/align-items*/
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+
+.arrow-button {
+  font-size: 10px;
+  padding: 2px 10px;
+  margin: 0 10px;
+  height: 25px;
+}
+
+.verse {
+  font-size: 2em;
+  list-style-type: none;
+  padding: 0px;
+  font-weight: 100;
+  color: #ddd;
+}
+
+
+svg {
+  width: 100%; /* Full width of the container */
+  /* Set a fixed height or a maximum height for the SVG */
+  height: 300px; /* Example fixed height */
+  background-color: whitesmoke;
+}
+#county-name {
+  text-align: center;
+  width: 100%; /* Ensure the county name div spans the full width of the container */
+  height: 20px; /* Reserve space for one line of text */
+  margin-top: 10px; /* Space between the SVG and the county name div */
+  /* Optional: set a minimum font size for the text to ensure the space is always adequate */
+  font-size: 16px; /* Example font size */
+  /* Optional: if you want to keep the space even when the div is empty */
+  visibility: hidden; /* This will make the text invisible instead of removing it */
+}
+
+/* TODO add css classes for active-verse and active-line */
+.active-verse {
+  font-weight: 900;
+  color: #555;
+}
+
+.active-line {
+  color: black;
+}
+
+/* TODO add css to create filler verse  */
+.filler-verse {
+  height: 500px;
+}
+
+/* TODO add css class to make "red" span clickable */
+.red-span {
+  cursor: pointer;
+}
+
+.purple-span {
+  cursor: pointer;
+}
+/* TODO add css class to make red-text text red */
+.red-text {
+  color: red;
+}
+
+.purple-text{
+  color: purple;
+}
+
+/* TODO illustrate how to use css classes to interact with d3 elements */
